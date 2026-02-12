@@ -1,0 +1,13 @@
+#passes {
+  background-color: black;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.passCardsContainer {
+  display: flex;
+  gap: 70px;
+}

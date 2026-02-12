@@ -1,0 +1,81 @@
+#contact {
+  background-color: black;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+.location_contactContainer {
+  display: flex;
+  gap: 50px;
+}
+
+.contactDiv {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+  background-color: var(--card-color);
+  gap: 10px;
+  width: 300px;
+  height: 370px;
+  padding: 30px 30px 20px 30px;
+  border-radius: 20px;
+}
+
+.contactDiv h1,
+.locationDiv h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+.socialMedia img {
+  width: 50px;
+  margin: 0;
+}
+
+.socialMedia p,
+.contactDiv p {
+  font-family: sans-serif;
+  opacity: 1;
+}
+
+.contactDiv p {
+  margin-top: 20px;
+}
+
+.locationDiv {
+  text-align: center;
+  background-color: var(--card-color);
+  border-radius: 20px;
+}
+
+.mapDiv {
+  width: 700px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.locationTextDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.location {
+  width: 30px;
+  height: 30px;
+  display: inline;
+  opacity: 0.5;
+}

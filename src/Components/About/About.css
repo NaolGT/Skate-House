@@ -1,0 +1,41 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+  background-color: black;
+}
+
+.aboutdiv {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.aboutdiv img {
+  width: 600px;
+  border-radius: 20px;
+}
+
+.aboutText {
+  width: 350px;
+  font-size: 1.8rem;
+  line-height: 107%;
+}
+
+.aboutText p {
+  margin-bottom: 15px;
+  letter-spacing: 0.7px;
+  opacity: 1;
+  font-weight: 100;
+}
+
+.aboutText button {
+  font-size: 1.8rem;
+  padding: 8px 8px;
+  border-radius: 5px;
+  background: rgb(204, 204, 204);
+  margin-top: 0;
+  letter-spacing: 0.7px;
+}

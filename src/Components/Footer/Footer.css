@@ -1,0 +1,43 @@
+#footer {
+  background-color: #363636;
+  padding-top: 90px;
+  text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+
+.LSQ {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.LSQ h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  height: 60px;
+  gap: 10px;
+}
+
+.socials img {
+  width: 55px;
+  height: 55px;
+}
+
+.quickLinks,
+.quickLinks p {
+  line-height: 1.5px;
+  opacity: 1;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.quickLinks p:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

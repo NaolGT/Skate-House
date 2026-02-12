@@ -1,0 +1,37 @@
+.serviceCard {
+  width: 400px;
+  background: var(--card-color);
+  /* opacity: 0.1; */
+  backdrop-filter: blur(10px);
+  border: 0.1px solid rgb(60, 60, 60);
+  padding: 40px 15px;
+  width: 420px;
+  border-radius: 20px;
+}
+
+.serviceCard img {
+  width: 80px;
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 3px;
+  margin-top: 15px;
+}
+
+p {
+  margin-top: 3px;
+  opacity: 0.8;
+}
+
+.cardInfo {
+  opacity: 1;
+}
+
+.serviceCard:hover {
+  transform: scale(1.02);
+  background: #1f1f1f;
+  transition: 0.4s;
+}
