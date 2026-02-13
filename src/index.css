@@ -8,6 +8,7 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   overflow-x: hidden;
+  /* padding: 0; */
 }
 
 * {
@@ -22,10 +23,9 @@ body {
   background: #1b1b1b;
   width: 100%;
   overflow-x: hidden;
-  /* display: flex;
-  justify-content: center; */
   /* background-color: var(--yellow-text); */
 }
+
 
 button {
   cursor: pointer;

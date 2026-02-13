@@ -77,7 +77,7 @@ const Hero = () => {
             <button>Learn More</button>
           </a>
         </div>
-        <img src={hero_skate} alt="" width="1200px" class="skate" />
+        <img src={hero_skate} alt="" class="skate" />
       </section>
     </div>
   );
