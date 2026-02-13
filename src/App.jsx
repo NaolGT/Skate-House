@@ -8,10 +8,11 @@ import Passes from "./Components/Passes/Passes";
 import Gallery from "./Components/Gallery/Gallery";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import './App.css'
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Hero />
       <Services />
       <About />

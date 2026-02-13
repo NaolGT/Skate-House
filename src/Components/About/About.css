@@ -14,12 +14,14 @@
 }
 
 .aboutdiv img {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   border-radius: 20px;
 }
 
 .aboutText {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   font-size: 1.8rem;
   line-height: 107%;
 }
@@ -38,4 +40,19 @@
   background: rgb(204, 204, 204);
   margin-top: 0;
   letter-spacing: 0.7px;
+}
+
+@media (max-width: 700px) {
+  .aboutdiv {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .aboutText {
+    font-size: 1.1rem;
+    max-width: 90%;
+    text-align: center;
+  }
 }
