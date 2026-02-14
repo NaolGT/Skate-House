@@ -48,7 +48,7 @@ const Contact = () => {
           </div>
           <div className="locationTextDiv">
             <img src={location} alt="" className="location" />
-            <p>This is the Location</p>
+            <p>Hawassa-Piassa, Hayk BLDG.-5th Floor</p>
           </div>
         </div>
       </div>
