@@ -37,13 +37,14 @@ const Contact = () => {
           <div className="mapDiv">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1036.1877953149663!2d38.47436518775507!3d7.051782710369196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b145004701a879%3A0x7fc34410341dc52e!2sSuper%20skate%20hawassa!5e0!3m2!1sen!2set!4v1770578166206!5m2!1sen!2set"
-              width="50%"
+              width="90%"
               max-width="90%"
               height="450"
               style={{ border: "0" }}
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              className="map"
             ></iframe>
           </div>
           <div className="locationTextDiv">

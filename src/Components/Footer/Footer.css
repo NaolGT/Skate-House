@@ -22,12 +22,12 @@
 .socials {
   display: flex;
   height: 60px;
-  gap: 10px;
+  gap: 15px;
 }
 
 .socials img {
-  width: 55px;
-  height: 55px;
+  width: 53px;
+  height: 53px;
 }
 
 .quickLinks,

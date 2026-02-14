@@ -101,4 +101,8 @@
     align-items: center;
     justify-content: center;
   }
+
+  .map {
+    width: 53%;
+  }
 }
