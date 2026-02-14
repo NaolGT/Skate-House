@@ -47,7 +47,9 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p>Copyright © 2026 Super-Skate Hawassa. All rights reserved. </p>
+      <p className="copyright">
+        Copyright © 2026 Super-Skate Hawassa. All rights reserved.{" "}
+      </p>
     </div>
   );
 };

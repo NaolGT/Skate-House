@@ -27,7 +27,7 @@ const ImageSlider = ({ images }) => {
       <div className="imgDiv">
         <img src={images[Index]} alt="" />
       </div>
-      <img src={arrow} alt="" className="rightArrow arrow" onClick={next} />
+      <img src={arrow} alt="" className="arrow rightArrow" onClick={next} />
     </div>
   );
 };

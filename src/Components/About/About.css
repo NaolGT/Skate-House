@@ -56,3 +56,19 @@
     text-align: center;
   }
 }
+
+@media (max-width: 570px) {
+  #about {
+    padding-top: 70px;
+  }
+
+  .aboutdiv img {
+    width: 82%;
+    border-radius: 10px;
+  }
+
+  .aboutdiv button {
+    font-size: 1.3rem;
+    letter-spacing: 0.4px;
+  }
+}

@@ -12,7 +12,11 @@
   margin: 0;
   /* background-color: brown; */
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 10px;
+}
+
+.imgDiv img {
+  width: 100%;
 }
 
 .arrow {
@@ -32,4 +36,34 @@
 
 .rightArrow {
   transform: rotate(-90deg);
+}
+
+@media (max-width: 570px) {
+  .imgDiv {
+    display: flex;
+    width: 100%;
+    height: 267px;
+    align-items: center;
+    padding: 0;
+    /* background-color: yellow; */
+  }
+
+  .imgDiv img {
+    width: 100%;
+  }
+
+  .arrow {
+    margin: 0 9px;
+    opacity: 0.5;
+    position: absolute;
+    width: 14%;
+  }
+
+  .leftArrow {
+    left: 0;
+  }
+
+  .rightArrow {
+    right: 0;
+  }
 }

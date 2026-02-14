@@ -4,7 +4,7 @@ import "./Gallery.css";
 
 const Gallery = () => {
   return (
-    <div id="gallery">
+    <div id="gallery" className="sections">
       <Title title={"Captured on Wheels"} />
       <ImageSlider
         images={[

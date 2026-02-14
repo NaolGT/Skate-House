@@ -127,6 +127,7 @@
   font-size: 1.1rem;
   line-height: 98%;
   margin-top: 0;
+  opacity: 0.8;
   letter-spacing: 0.4px;
   animation-name: text-appear;
   animation-duration: 1.2s;
@@ -151,7 +152,7 @@
   top: 0;
   left: 0;
   opacity: 0.65;
-  transform: translateX(37.5%) translateY(20%) rotate(60.5deg);
+  transform: translateX(37%) translateY(20%) rotate(60.5deg);
   animation: skate-motion;
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
@@ -163,7 +164,7 @@
     opacity: 0;
   }
   100% {
-   transform: translateX(37.5%) translateY(20%) rotate(60.5deg);
+    transform: translateX(37%) translateY(20%) rotate(60.5deg);
     opacity: 0.65;
   }
 }
@@ -190,3 +191,113 @@
 /* END oF DESKTOP HERO SECTION */
 
 /* MOBILE VIEW  */
+
+@media (max-width: 570px) {
+  .hero {
+    background-image: url("../../assets/mobile-wiew2.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 30px;
+  }
+
+  .navbar {
+    padding: 0;
+    margin-bottom: 30px;
+    /* width: 100%; */
+    justify-content: space-between;
+    /* background-color: tomato; */
+    padding: 30px 40px;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+    line-height: 80%;
+    width: 100px;
+    margin: 0;
+  }
+
+  .uldiv {
+    display: none;
+  }
+
+  .uldiv.show {
+    display: block;
+    position: absolute;
+    background-color: var(--card-color);
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    justify-content: center;
+    /* display: none; */
+    width: 100%;
+  }
+
+  .uldiv ul {
+    animation: none;
+    font-size: 2rem;
+    position: absolute;
+    top: 16%;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    padding: 0;
+  }
+
+  .menu {
+    display: block;
+    width: 11%;
+    margin: 0;
+    cursor: pointer;
+    margin-bottom: 8px;
+    z-index: 1;
+  }
+
+  .header-text {
+    margin: 0;
+    margin-top: 70px;
+    backdrop-filter: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    scale: 1.4;
+  }
+
+  .header-text h1 {
+    font-size: 2.7rem;
+    text-align: center;
+  }
+
+  .header-text p {
+    font-size: 0.7rem;
+    width: 200px;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 9px;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+
+  .header-text button {
+    font-size: 1.1rem;
+    padding: 6px 7px;
+    margin-top: 7px;
+    z-index: 999;
+    scale: 0.92;
+    letter-spacing: 0.5px;
+  }
+
+  .skate {
+    position: absolute;
+    transform: none;
+    width: 130%;
+    left: 50%;
+    transform: translateX(-52%);
+    top: 50%;
+    margin: 0;
+    /* background-color: yellow; */
+    animation: none;
+  }
+}

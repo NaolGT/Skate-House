@@ -1,5 +1,4 @@
 .serviceCard {
-  width: 400px;
   background: var(--card-color);
   /* opacity: 0.1; */
   backdrop-filter: blur(10px);
@@ -34,4 +33,30 @@ p {
   transform: scale(1.02);
   background: #1f1f1f;
   transition: 0.4s;
+}
+
+@media (max-width: 570px) {
+  .serviceCard {
+    width: 320px;
+    padding: 25px 15px;
+  }
+
+  /* .serviceCard img {
+    width: 17%;
+  } */
+
+  .serviceCard h3 {
+    font-size: 1.3rem;
+    margin-top: 5px;
+  }
+
+  .cardInfo {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .imgdiv {
+    scale: 0.78;
+    margin: 0;
+  }
 }

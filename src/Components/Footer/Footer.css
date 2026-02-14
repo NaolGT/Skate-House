@@ -16,6 +16,7 @@
 .LSQ h1 {
   padding: 0;
   margin: 0;
+  width: 110px;
 }
 
 .socials {
@@ -40,4 +41,40 @@
 .quickLinks p:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.copyright {
+  font-size: 1rem;
+  font-family: roboto, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 570px) {
+  #footer {
+    padding-top: 30px;
+  }
+
+  .LSQ {
+    /* background-color: yellow; */
+    margin-bottom: 10px;
+  }
+
+  .LSQ h1 {
+    font-size: 1.5rem;
+    width: 100px;
+  }
+
+  .socials {
+    scale: 0.65;
+  }
+
+  .quickLinks p {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+    font-family: roboto;
+    letter-spacing: 0.1px;
+  }
 }

@@ -5,7 +5,7 @@ import PassCards from "../SubComponents/PassCards/PassCards";
 
 const Passes = () => {
   return (
-    <div id="passes">
+    <div id="passes" className="sections">
       <Title title={"skate passes"} bottomSpace="90px" />
       <div className="passCardsContainer">
         <PassCards
@@ -14,12 +14,14 @@ const Passes = () => {
           price={"200 etb"}
           cardScale={1.1}
         />
-        <PassCards
-          duration={"monthly pass"}
-          detail={"Skate access + music"}
-          price={"3200 etb"}
-          cardScale={1.3}
-        />
+        <div className="second">
+          <PassCards
+            duration={"monthly pass"}
+            detail={"Skate access + music"}
+            price={"3200 etb"}
+            cardScale={1.3}
+          />
+        </div>
         <PassCards
           duration={"private session"}
           detail={"Skate access + music"}

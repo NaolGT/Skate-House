@@ -39,5 +39,29 @@ h1 {
 
 .openHours {
   font-size: 2.4rem;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+@media (max-width: 570px) {
+  #sessions {
+    padding-top: 70px;
+  }
+
+  .SessionDiv {
+    width: 90%;
+    padding: 20px 0 8px 0;
+  }
+
+  .SessionDiv img {
+    width: 15%;
+  }
+
+  .SessionDiv h1 {
+    font-size: 2rem;
+  }
+
+  .openHours {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
 }

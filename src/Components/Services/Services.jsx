@@ -8,7 +8,7 @@ import "./Services.css";
 
 const Services = () => {
   return (
-    <div id="services">
+    <div id="services" className="sections">
       <Title title={"What we Offer"} />
       <div className="serviceCardsContainer">
         <ServiceCards

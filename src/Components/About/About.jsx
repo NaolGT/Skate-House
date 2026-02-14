@@ -5,7 +5,7 @@ import kids from "../../assets/friends-having-fun-while-skating_23-2150880818.pn
 
 const About = () => {
   return (
-    <div id="about">
+    <div id="about" className="sections">
       <Title title={"About / our story"} />
       <div className="aboutdiv">
         <img src={kids} alt="" />

@@ -21,3 +21,9 @@
 .communityImg {
   width: 100px;
 }
+
+@media (max-width:570px) {
+  .serviceCardsContainer{
+    gap: 15px;
+  }
+}

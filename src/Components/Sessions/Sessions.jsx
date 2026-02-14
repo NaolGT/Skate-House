@@ -5,7 +5,7 @@ import clock from "../../assets/clock.png";
 
 const Sessions = () => {
   return (
-    <div id="sessions">
+    <div id="sessions" className="sections">
       <Title title={"skate sessions"} />
       <div className="SessionDiv">
         <img src={clock} alt="" />
