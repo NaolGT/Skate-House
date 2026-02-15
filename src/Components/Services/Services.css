@@ -22,8 +22,8 @@
   width: 100px;
 }
 
-@media (max-width:570px) {
-  .serviceCardsContainer{
+@media (max-width: 1000px) {
+  .serviceCardsContainer {
     gap: 15px;
   }
 }

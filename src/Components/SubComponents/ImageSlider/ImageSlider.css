@@ -38,7 +38,7 @@
   transform: rotate(-90deg);
 }
 
-@media (max-width: 570px) {
+@media (max-width: 1000px) {
   .imgDiv {
     display: flex;
     width: 100%;

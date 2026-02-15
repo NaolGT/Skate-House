@@ -44,7 +44,7 @@
   transform: translateY(-1%) scale(1.005);
 }
 
-@media (max-width: 570px) {
+@media (max-width: 1000px) {
   .passCards {
     width: 80%;
     padding: 30px 0;

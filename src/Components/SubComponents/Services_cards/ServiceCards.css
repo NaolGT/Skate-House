@@ -35,7 +35,7 @@ p {
   transition: 0.4s;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 1000px) {
   .serviceCard {
     width: 320px;
     padding: 25px 15px;

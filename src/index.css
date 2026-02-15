@@ -54,7 +54,7 @@ h3 {
   font-weight: 500;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 1000px) {
   .section-title {
     font-size: 2rem;
     margin-top: 10px;
