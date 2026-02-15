@@ -49,7 +49,7 @@ const Contact = () => {
           </div>
           <div className="locationTextDiv">
             <img src={location} alt="" className="location" />
-            <p>Hawassa-Piassa, Hayk BLDG.-5th Floor</p>
+            <p>Hayk BLDG. 5th Floor, Hawassa, Ethiopia</p>
           </div>
         </div>
       </div>
