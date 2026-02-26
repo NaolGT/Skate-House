@@ -7,7 +7,7 @@ import PassCards from "../SubComponents/PassCards/PassCards";
 const Passes = () => {
   const [passes,setPasses]=useState({
     basic:{ title: "", body:"" ,price:""},
-	  permium:{ title: "", body:"" ,price:""},
+	  premium:{ title: "", body:"" ,price:""},
 	  family:{ title: "", body:"" ,price:""}
     });
   
@@ -36,9 +36,9 @@ const Passes = () => {
         />
         <div className="second" >
           <PassCards 
-            duration={passes.permium.title}
-            detail={passes.permium.body}
-            price={passes.permium.price + "ETB"}
+            duration={passes.premium.title}
+            detail={passes.premium.body}
+            price={passes.premium.price + "ETB"}
             cardScale={1.3}
           />
         </div>

@@ -24,27 +24,19 @@ const Footer = () => {
       }
     });
   },[]);
-  
-  const handleChange=(e)=>{
-    const {name,value}=e.target;
-    setshow((prev)={
-      ...prev,
-      [name]:value
-    });
-  };
   return (
     <div id="footer">
       <div className="LSQ">
         <h1>Super skate</h1>
         <div className="socials">
-          <a onChange={handleChange} href={footer.facebook}>
+          <a  href={footer.socialLinks.facebook}>
             <img src={Facebook} alt="" className="facebook" />
           </a>
-          <a onChange={handleChange} href={footer.telegram}>
+          <a  href={footer.socialLinks.telegram}>
             <img src={Telegram} alt="" className="telegram" />
           </a>
           <a
-            onChange={handleChange} href={footer.tiktok}
+             href={footer.socialLinks.tiktok}
           >
             <img src={Tiktok} alt="" className="tiktok" />
           </a>
