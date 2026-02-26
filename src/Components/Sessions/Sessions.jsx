@@ -12,14 +12,23 @@ const Sessions = () => {
 
   useEffect(()=>{
     fetch("http://localhost:5000/api/session")
-    .then((res)=>res.json())
-    .then((data)=>{
-     if (Array.isArray(data)&&data.length>0){
-      setSession(data[0]);
-     }else{
-      setSession(data);
-     }
-  });
+      .then((res) => {
+        const contentType = res.headers.get("content-type") || "";
+        if (!res.ok || !contentType.includes("application/json")) {
+          throw new Error("Invalid session API response");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setSession(data[0]);
+        } else {
+          setSession(data);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load sessions:", error);
+      });
   },[]);
   const handleChange=(e)=>{
     const {name,value}=e.target;

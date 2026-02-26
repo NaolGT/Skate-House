@@ -5,24 +5,32 @@ import Title from "../SubComponents/Title/Title";
 import PassCards from "../SubComponents/PassCards/PassCards";
 
 const Passes = () => {
-  const [passes,setPasses]=useState({
-    basic:{ title: "", body:"" ,price:""},
-	  premium:{ title: "", body:"" ,price:""},
-	  family:{ title: "", body:"" ,price:""}
-    });
-  
-    useEffect(()=>{
-      fetch("http://localhost:5000/api/pricing")
-      .then((res)=>res.json())
-      .then((data)=>{
-       if (Array.isArray(data)&&data.length>0){
-        setPasses(data[0]);
-       }else{
-        setPasses(data);
-       }
-    })
-    .catch(error=>console.error(error));
-    },[]);
+  const [passes, setPasses] = useState({
+    basic: { title: "", body: "", price: "" },
+	  premium: { title: "", body: "", price: "" },
+	  family: { title: "", body: "", price: "" },
+  });
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/pricing")
+      .then((res) => {
+        const contentType = res.headers.get("content-type") || "";
+        if (!res.ok || !contentType.includes("application/json")) {
+          throw new Error("Invalid pricing API response");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setPasses(data[0]);
+        } else {
+          setPasses(data);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load passes:", error);
+      });
+  }, []);
    
   return (
     <div id="passes" className="sections">

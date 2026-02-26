@@ -21,22 +21,16 @@ const About = () => {
     });
     },[]);
 
-    const handleChange=(e)=>{
-      const {name,value}=e.target;
-      setshow((prev)={
-        ...prev,
-        [name]:value
-      });
-    };
+      const handleChange = (e) => {
+        // Removed as it was attached to a non-input element
+      };
   return (
     <div id="about" className="sections">
       <Title title={"About / our story"} />
       <div className="aboutdiv">
         <img src={kids} alt="" />
         <div className="aboutText">
-          <p onChange={handleChange}>
-          {about.content}
-          </p>
+                <p>{about.content}</p>
           <button>read our story</button>
         </div>
       </div>
