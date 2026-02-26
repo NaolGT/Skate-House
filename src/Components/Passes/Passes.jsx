@@ -1,31 +1,51 @@
 import React from "react";
+import { useEffect,useState } from "react";
 import "./Passes.css";
 import Title from "../SubComponents/Title/Title";
 import PassCards from "../SubComponents/PassCards/PassCards";
 
 const Passes = () => {
+  const [passes,setPasses]=useState({
+    basic:{ title: "", body:"" ,price:""},
+	  permium:{ title: "", body:"" ,price:""},
+	  family:{ title: "", body:"" ,price:""}
+    });
+  
+    useEffect(()=>{
+      fetch("http://localhost:5000/api/pricing")
+      .then((res)=>res.json())
+      .then((data)=>{
+       if (Array.isArray(data)&&data.length>0){
+        setPasses(data[0]);
+       }else{
+        setPasses(data);
+       }
+    })
+    .catch(error=>console.error(error));
+    },[]);
+   
   return (
     <div id="passes" className="sections">
       <Title title={"skate passes"} bottomSpace="90px" />
-      <div className="passCardsContainer">
-        <PassCards
-          duration={"1 hour pass"}
-          detail={"Skate access + music"}
-          price={"200 etb"}
+      <div className="passCardsContainer" >
+        <PassCards 
+          duration={passes.basic.title}
+          detail={passes.basic.body}
+          price={passes.basic.price+"ETB"}
           cardScale={1.1}
         />
-        <div className="second">
-          <PassCards
-            duration={"monthly pass"}
-            detail={"Skate access + music"}
-            price={"3200 etb"}
+        <div className="second" >
+          <PassCards 
+            duration={passes.permium.title}
+            detail={passes.permium.body}
+            price={passes.permium.price + "ETB"}
             cardScale={1.3}
           />
         </div>
-        <PassCards
-          duration={"private session"}
-          detail={"Skate access + music"}
-          price={"300 etb"}
+        <PassCards 
+          duration={passes.family.title}
+          detail={passes.family.body}
+          price={passes.family.price +"ETB"}
           cardScale={1.1}
         />
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import "./Contact.css";
 import Title from "../SubComponents/Title/Title";
 import facebook from "../../assets/Facebook_icon.png";
@@ -7,6 +7,46 @@ import tiktok from "../../assets/tiktok_img.png";
 import location from "../../assets/location Icon.png";
 
 const Contact = () => {
+  const [contacts,setContacts]=useState([]);
+  const [formData,setFormData]=useState({
+    name:"",
+    email:"",
+    message:""
+  });
+  useEffect(()=>{
+    fetch("http://localhost:5000/api/contact")
+    .then(res=>res.json())
+    .then(data=>setContacts(data))
+    .catch(err=>console.error("Error fetching contacts:",err));
+  },[]);
+  const handlechange=(e)=>{
+    setFormData({
+      ...formData,
+      [e.target.name]:e.target.value
+    });
+  };
+  const handleSubmit=async (e)=>{
+    e.preventDefault();
+    try{
+      const response=await
+      fetch("http://localhost:5000/api/contact",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify(formData)
+      });
+      const data=await response.json();
+      console.log("message saved:",data);
+      setFormData({
+        name:"",
+        email:"",
+        message:""
+      });
+    }catch(error){
+      console.error("Error submitting form:",error);
+    }
+  };
   return (
     <div id="contact" className="sections">
       <Title title={"Contact and location"} />
@@ -41,9 +81,9 @@ const Contact = () => {
               max-width="90%"
               height="450"
               style={{ border: "0" }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
               className="map"
             ></iframe>
           </div>
@@ -56,5 +96,6 @@ const Contact = () => {
     </div>
   );
 };
+
 
 export default Contact;

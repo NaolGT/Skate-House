@@ -32,8 +32,8 @@ const Hero = () => {
 
   return (
     <div id="hero">
-      <section class="hero">
-        <nav class="navbar">
+      <section className="hero">
+        <nav className="navbar">
           <h1>Super Skate</h1>
           <img
             src={menu}
@@ -63,7 +63,7 @@ const Hero = () => {
             </ul>
           </div>
         </nav>
-        <div class="header-text">
+        <div className="header-text">
           <h1>
             Lace Up. <br />
             Step Out. <br />
@@ -77,7 +77,7 @@ const Hero = () => {
             <button>Learn More</button>
           </a>
         </div>
-        <img src={hero_skate} alt="" class="skate" />
+        <img src={hero_skate} alt="" className="skate" />
       </section>
     </div>
   );
