@@ -52,21 +52,21 @@ const Contact = () => {
         <div className="contactDiv">
           <h1>Contacts us on</h1>
           <div className="socialMedia">
-            <a href={contact.socialLinks.facebook || "#"}>
-              <img src={facebook} alt="" className="facebook" />
+            <img src={facebook} alt="" className="facebook" />
+             <a href={contact.socialLinks.facebook || "#"}>
               <p> facebook.com</p>
             </a>
           </div>
           <div className="socialMedia">
+            <img src={telegram} alt="" className="telegram" />
             <a href={contact.socialLinks.telegram || "#"}>
-              <img src={telegram} alt="" className="telegram" />
               <p>telegram.com</p>
             </a>
           </div>
           <div className="socialMedia">
             {/* href="https://www.tiktok.com/@super_skate_hawassa?is_from_webapp=1&sender_device=pc" */}
+            <img src={tiktok} alt="" className="tiktok" />
             <a href={contact.socialLinks.tiktok || "#"}>
-              <img src={tiktok} alt="" className="tiktok" />
               <p>super_skate_hawassa</p>
             </a>
           </div>
