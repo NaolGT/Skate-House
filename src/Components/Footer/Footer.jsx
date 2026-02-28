@@ -14,7 +14,7 @@ const Footer = () => {
       });
     
   useEffect(()=>{
-    fetch(`${import.meta.env.VITE_API_URL}/footer`)
+    fetch("http://localhost:5000/api/footer")
       .then((res)=>res.json())
       .then((data)=>{
       if (Array.isArray(data)&&data.length>0){
