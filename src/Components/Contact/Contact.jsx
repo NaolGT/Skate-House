@@ -9,7 +9,7 @@ import location from "../../assets/location Icon.png";
 const Contact = () => {
   const [contact, setContact] = useState({
     socialLinks: { facebook: "", tiktok: "", telegram: "" },
-    ContactInfo: { phone: "", address: "", googleMapLink: "" },
+    contactAddress: { phone: "", address: "", googleMapLink: "" },
   });
   const [hasError, setHasError] = useState(false);
 
@@ -32,10 +32,10 @@ const Contact = () => {
             tiktok: contactData?.socialLinks?.tiktok || "",
             telegram: contactData?.socialLinks?.telegram || "",
           },
-          ContactInfo: {
-            phone: contactData?.ContactInfo?.phone || "",
-            address: contactData?.ContactInfo?.address || "",
-            googleMapLink: contactData?.ContactInfo?.googleMapLink || "",
+          contactAddress: {
+            phone: contactData?.contactAddress?.phone || "",
+            address: contactData?.contactAddress?.address || "",
+            googleMapLink: contactData?.contactAddress?.googleMapLink || "",
           },
         });
         setHasError(false);
@@ -70,14 +70,13 @@ const Contact = () => {
               <p>super_skate_hawassa</p>
             </a>
           </div>
-          <p>{"Tel: " + (contact?.ContactInfo?.phone || "Not available")}</p>
+          <p>{"Tel: " + (contact?.contactAddress?.phone || "Not available")}</p>
         </div>
         <div className="locationDiv">
           <h1>location</h1>
           <div className="mapDiv">
             <iframe
-              // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1036.1877953149663!2d38.47436518775507!3d7.051782710369196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b145004701a879%3A0x7fc34410341dc52e!2sSuper%20skate%20hawassa!5e0!3m2!1sen!2set!4v1770578166206!5m2!1sen!2set"
-              src={contact?.ContactInfo?.googleMapLink || null}
+              src={contact?.contactAddress?.googleMapLink || null}
               width="90%"
               max-width="90%"
               height="450"
@@ -90,7 +89,7 @@ const Contact = () => {
           </div>
           <div className="locationTextDiv">
             <img src={location} alt="" className="location" />
-            <p>{contact?.ContactInfo?.address || (hasError ? "Location not available" : "")}</p>
+            <p>{contact?.contactAddress?.address || (hasError ? "Location not available" : "")}</p>
           </div>
         </div>
       </div>
