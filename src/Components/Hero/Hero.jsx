@@ -29,11 +29,36 @@ const Hero = () => {
   const closeMenu = () => {
     setshow(false);
   };
-
+  const [hero, setHero] = useState({
+    title: "",
+    content: "",
+  });
+	
+  useEffect(() => {
+    fetch("http://localhost:5000/api/hero")
+      .then((res) => {
+        const contentType = res.headers.get("content-type") || "";
+        if (!res.ok || !contentType.includes("application/json")) {
+          throw new Error("Invalid hero API response");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setHero(data[0]);
+        } else {
+          setHero(data);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load hero:", error);
+      });
+  }, []);
+    
   return (
     <div id="hero">
-      <section class="hero">
-        <nav class="navbar">
+      <section className="hero">
+        <nav className="navbar">
           <h1>Super Skate</h1>
           <img
             src={menu}
@@ -63,21 +88,16 @@ const Hero = () => {
             </ul>
           </div>
         </nav>
-        <div class="header-text">
-          <h1>
-            Lace Up. <br />
-            Step Out. <br />
-            Roller Skate.
-          </h1>
+        <div className="header-text">
+          <h1>{hero.title}</h1>
           <p>
-            Roll into the thrill of roller skating — gear up, hit the streets,
-            and join a community that lives for style, movement, and fun.
+            {hero.content}
           </p>
           <a href="#services">
             <button>Learn More</button>
           </a>
         </div>
-        <img src={hero_skate} alt="" class="skate" />
+        <img src={hero_skate} alt="" className="skate" />
       </section>
     </div>
   );

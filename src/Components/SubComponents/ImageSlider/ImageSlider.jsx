@@ -22,7 +22,7 @@ const ImageSlider = ({ images }) => {
   };
   return (
     <div className="slider">
-      <img src="" alt="" />
+      <img src="../../../assets/white-arrow-png-41944.png" alt="" />
       <img src={arrow} alt="" className="leftArrow arrow" onClick={prev} />
       <div className="imgDiv">
         <img src={images[Index]} alt="" />

@@ -1,31 +1,59 @@
 import React from "react";
+import { useEffect,useState } from "react";
 import "./Passes.css";
 import Title from "../SubComponents/Title/Title";
 import PassCards from "../SubComponents/PassCards/PassCards";
 
 const Passes = () => {
+  const [passes, setPasses] = useState({
+    basic: { title: "", body: "", price: "" },
+	  premium: { title: "", body: "", price: "" },
+	  family: { title: "", body: "", price: "" },
+  });
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/pricing")
+      .then((res) => {
+        const contentType = res.headers.get("content-type") || "";
+        if (!res.ok || !contentType.includes("application/json")) {
+          throw new Error("Invalid pricing API response");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setPasses(data[0]);
+        } else {
+          setPasses(data);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load passes:", error);
+      });
+  }, []);
+   
   return (
     <div id="passes" className="sections">
       <Title title={"skate passes"} bottomSpace="90px" />
-      <div className="passCardsContainer">
-        <PassCards
-          duration={"1 hour pass"}
-          detail={"Skate access + music"}
-          price={"200 etb"}
+      <div className="passCardsContainer" >
+        <PassCards 
+          duration={passes.basic.title}
+          detail={passes.basic.body}
+          price={passes.basic.price+"ETB"}
           cardScale={1.1}
         />
-        <div className="second">
-          <PassCards
-            duration={"monthly pass"}
-            detail={"Skate access + music"}
-            price={"3200 etb"}
+        <div className="second" >
+          <PassCards 
+            duration={passes.premium.title}
+            detail={passes.premium.body}
+            price={passes.premium.price + "ETB"}
             cardScale={1.3}
           />
         </div>
-        <PassCards
-          duration={"private session"}
-          detail={"Skate access + music"}
-          price={"300 etb"}
+        <PassCards 
+          duration={passes.family.title}
+          detail={passes.family.body}
+          price={passes.family.price +"ETB"}
           cardScale={1.1}
         />
       </div>
