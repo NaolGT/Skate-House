@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import hero_skate from "../../assets/Hero-skate.png";
+import hero_skate from "../../assets/Hero-skate.webp";
 import "./Hero.css";
 import Services from "../Services/Services";
 import menu from "../../assets/Hamburger-menu_-_Delapouite_-_white_-_game-icons.svg.png";
+import logo from "../../assets/logo.webp";
 
 const Hero = () => {
   // const drop = document.querySelector(".menu");
@@ -33,7 +34,7 @@ const Hero = () => {
     title: "",
     content: "",
   });
-	
+
   useEffect(() => {
     fetch("http://localhost:5000/api/hero")
       .then((res) => {
@@ -54,12 +55,12 @@ const Hero = () => {
         console.error("Failed to load hero:", error);
       });
   }, []);
-    
+
   return (
     <div id="hero">
       <section className="hero">
         <nav className="navbar">
-          <h1>Super Skate</h1>
+          <img src={logo} alt="" width={160} className="logo" />
           <img
             src={menu}
             alt=""
@@ -90,9 +91,7 @@ const Hero = () => {
         </nav>
         <div className="header-text">
           <h1>{hero.title}</h1>
-          <p>
-            {hero.content}
-          </p>
+          <p>{hero.content}</p>
           <a href="#services">
             <button>Learn More</button>
           </a>
